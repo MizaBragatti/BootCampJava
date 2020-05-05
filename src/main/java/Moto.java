@@ -1,7 +1,16 @@
-public class Carro {
+public class Moto {
+
+	public int getCilindrada() {
+		return cilindrada;
+	}
+
+	public void setCilindrada(int cilindrada) {
+		this.cilindrada = cilindrada;
+	}
 
 	public String cor;
 	public String modelo;
+	public int cilindrada;
 	public Double velocidadeAtual;
 	public final Double velocidadeMaxima;
 
@@ -12,7 +21,6 @@ public class Carro {
 	}
 
 	public void setCor(String cor) {
-		// this.cor = cores;
 		this.cor = cor;
 	}
 
@@ -36,23 +44,22 @@ public class Carro {
 		return this.ligado;
 	}
 
-	// public Carro(String cor, String modelo, Double velocidadeMáxima){
-	public Carro(String cor, String modelo, Double velocidadeMaxima) {
-		// velocidadeAtual = 0;
+	public Moto(String cor, String modelo, Double velocidadeMaxima, int cilindrada) {
 		velocidadeAtual = 0.0;
 		this.cor = cor;
 		this.modelo = modelo;
 		this.velocidadeMaxima = velocidadeMaxima;
+		this.cilindrada = cilindrada;
 	}
 
-	// liga o carro
+	// liga a moto
 	public Boolean ligaedesliga() {
 		if (this.ligado) {
 			this.ligado = false;
-			System.out.println("O carro foi desligado");
+			System.out.println("A moto foi desligada");
 		} else {
 			this.ligado = true;
-			System.out.println("O carro foi ligado");
+			System.out.println("A moto foi ligada");
 		}
 		return this.ligado;
 	}
